@@ -7,11 +7,12 @@
   <b> Search string like Food or lunch or ......</b>
   <br>
   <input type="text" placeholder="Food??, Breakfast???" [(ngModel)]="iTerm" name="1" required>
-  <br>
+  <br><br />
   <b> Zip code or city or ......</b>
   <br />
   <input type="text" placeholder="Zip Code, City??" [(ngModel)]="iLocation" name="2" required><br>
-  <b> Price point from 1 to 4. </b>
+  <br />
+  <b> Price point from 1 to 4. </b><br />
   <!-- <input type="number" placeholder="price 1, 2, 3, 4" [(ngModel)]="iPrice" name="3" required><br> -->
   <!-- <select name="iPrice" form="star" [(ngModel)]="iPrice" > -->
     
@@ -23,12 +24,15 @@
       </select>
     </form>  
   <button (click)="searchItYelp(iTerm, iLocation, iPrice)">Yelp it!</button>
-
+  <br />
 <!-- 
 {{ iTerm }}
 {{ iLocation }}
 {{ iPrice }} -->
 <div class="card">
+    <br />
+  <h1>Displays only businesses that are currently open....</h1>
+  <br />
   <p *ngFor="let one of results.businesses ">
     {{ one.name }}<br>
     {{ one.location.display_address }}<br>
