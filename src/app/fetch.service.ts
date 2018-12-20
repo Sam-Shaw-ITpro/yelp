@@ -24,7 +24,7 @@ export class FetchService {
 
   
     yelpIt(iTerm, iLocation, iPrice): Observable<any> {
-    return this.http.get<any>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${iTerm}&location=${iLocation}&price=${iPrice}`, httpOptions);
+    return this.http.get<any>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${iTerm}&location=${iLocation}&price=${iPrice}&open_now=true`, httpOptions);
   }                       
 
 }

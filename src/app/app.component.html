@@ -1,15 +1,29 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 <h1>
-  Welcome to {{ title }}!
+  Yelp it!
 </h1>
-<form>
+<form class="bigger">
+  <b> Search string like Food or lunch or ......</b>
+  <br>
   <input type="text" placeholder="Food??, Breakfast???" [(ngModel)]="iTerm" name="1" required>
-  <input type="text" placeholder="Zip Code, City??" [(ngModel)]="iLocation" name="2" required>
-  <input type="number" placeholder="price 1, 2, 3, 4" [(ngModel)]="iPrice" name="3" required>
+  <br>
+  <b> Zip code or city or ......</b>
+  <br />
+  <input type="text" placeholder="Zip Code, City??" [(ngModel)]="iLocation" name="2" required><br>
+  <b> Price point from 1 to 4. </b>
+  <!-- <input type="number" placeholder="price 1, 2, 3, 4" [(ngModel)]="iPrice" name="3" required><br> -->
+  <!-- <select name="iPrice" form="star" [(ngModel)]="iPrice" > -->
+    
+    <select name="iPrice" form="star" [(ngModel)]="iPrice" >
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+      </select>
+    </form>  
+  <button (click)="searchItYelp(iTerm, iLocation, iPrice)">Yelp it!</button>
 
-</form>
-<button (click)="searchItYelp(iTerm, iLocation, iPrice)">Yelp it!</button>
 <!-- 
 {{ iTerm }}
 {{ iLocation }}
@@ -19,9 +33,14 @@
     {{ one.name }}<br>
     {{ one.location.display_address }}<br>
     {{ one.display_phone }}<br>
-    <img [src]="one.image_url" width="100">
+rating: {{ one.rating }} stars<br>
+    {{ one.display_phone }}<br>
+    {{ one.transactions }}<br>
+    <img [src]="one.image_url" width="200">
   </p>
 </div>
+
+
 
 <!-- {{ businesess.name | json }} -->
 <!-- {{ error | json }} -->
