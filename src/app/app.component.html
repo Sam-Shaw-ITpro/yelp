@@ -1,50 +1,51 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<div class='container'>
+  <div class='left'>
+    <h1>
+      Yelp it!
+    </h1>
+    <form class="bigger">
+      <b>Pizza/Chinese/Burgers</b>
+      <br>
+      <input type="text"  [(ngModel)]="iTerm" name="1" required>
+      <br><br />
+      <b> Zip Code/City?</b>
+      <br />
+      <input type="text" [(ngModel)]="iLocation" name="2" required><br>
+      <br />
+      <b> Price from 1 to 4?</b><br />
+      <!-- <input type="number" placeholder="price 1, 2, 3, 4" [(ngModel)]="iPrice" name="3" required><br> -->
+      <!-- <select name="iPrice" form="star" [(ngModel)]="iPrice" > -->
 
-<h1>
-  Yelp it!
-</h1>
-<form class="bigger">
-  <b> Search string like Food or lunch or ......</b>
-  <br>
-  <input type="text" placeholder="Food??, Breakfast???" [(ngModel)]="iTerm" name="1" required>
-  <br><br />
-  <b> Zip code or city or ......</b>
-  <br />
-  <input type="text" placeholder="Zip Code, City??" [(ngModel)]="iLocation" name="2" required><br>
-  <br />
-  <b> Price point from 1 to 4. </b><br />
-  <!-- <input type="number" placeholder="price 1, 2, 3, 4" [(ngModel)]="iPrice" name="3" required><br> -->
-  <!-- <select name="iPrice" form="star" [(ngModel)]="iPrice" > -->
-    
-    <select name="iPrice" form="star" [(ngModel)]="iPrice" >
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
+      <select name="iPrice" form="star" [(ngModel)]="iPrice">
+        <option value="1">$</option>
+        <option value="2">$$</option>
+        <option value="3">$$$</option>
+        <option value="4">$$$$</option>
       </select>
-    </form>  
-  <button (click)="searchItYelp(iTerm, iLocation, iPrice)">Yelp it!</button>
-  <br />
-<!-- 
+    </form>
+    <br />
+    <button (click)="searchItYelp(iTerm, iLocation, iPrice)">Yelp it!</button>
+    </div>
+  <div class='right'>
+    <!-- 
 {{ iTerm }}
 {{ iLocation }}
 {{ iPrice }} -->
-<div class="card">
-    <br />
-  <h1>Displays only businesses that are currently open....</h1>
-  <br />
-  <p *ngFor="let one of results.businesses ">
-    {{ one.name }}<br>
-    {{ one.location.display_address }}<br>
-    {{ one.display_phone }}<br>
-rating: {{ one.rating }} stars<br>
-    {{ one.display_phone }}<br>
-    {{ one.transactions }}<br>
-    <img [src]="one.image_url" width="200">
-  </p>
+    <div class="card">
+          <h1>Currently open....</h1>
+      <br />
+      <p *ngFor="let one of results.businesses ">
+        <b>{{ one.name }}</b> <br>
+        {{ one.location.display_address }}<br>
+        {{ one.display_phone }}<br>
+        rating: {{ one.rating }} stars<br>
+        {{ one.display_phone }}<br>
+        <!-- {{ one.transactions }}<br> -->
+        <img [src]="one.image_url" width="100" height="100">
+      </p>
+    </div>
+  </div>
 </div>
-
-
 
 <!-- {{ businesess.name | json }} -->
 <!-- {{ error | json }} -->
