@@ -22,9 +22,37 @@ export class FetchService {
     private http: HttpClient
   ) { }
 
+  // &open_now=true
+    pieMe(currentLat, currentLong): Observable<any> {
+    return this.http.get<any>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?categories=pizza&latitude=${currentLat}&longitude=${currentLong}`, httpOptions);
+  }        
   
-    yelpIt(iTerm, iLocation, iPrice): Observable<any> {
-    return this.http.get<any>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${iTerm}&location=${iLocation}&price=${iPrice}&open_now=true`, httpOptions);
-  }                       
+  getOne(id): Observable<any> {
+    return this.http.get<any>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/${id}`, httpOptions);
+  }
+
+
+
+  // GET https://api.yelp.com/v3/businesses/{id}
+
+
+
+  // yelpIt(currentLat, currentLong): Observable<any> {
+  //   return this.http.get<any>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=pizza&location=${iLocation}&price=1`, httpOptions);
+  // }                       
+
+  // yelpIt(iTerm, iLocation, iPrice): Observable<any> {
+  //   return this.http.get<any>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${iTerm}&location=${iLocation}&price=${iPrice}`, httpOptions);
+  // }                       
+
+
+
+
+
+
+
+  
+
+
 
 }

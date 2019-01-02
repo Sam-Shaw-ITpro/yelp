@@ -1,51 +1,50 @@
 <div class='container'>
   <div class='left'>
-    <h1>
-      Yelp it!
-    </h1>
     <form class="bigger">
-      <b>Pizza/Chinese/Burgers</b>
+      <!-- <b>Pizza/Chinese/Burgers</b>
       <br>
-      <input type="text"  [(ngModel)]="iTerm" name="1" required>
-      <br><br />
-      <b> Zip Code/City?</b>
-      <br />
-      <input type="text" [(ngModel)]="iLocation" name="2" required><br>
-      <br />
-      <b> Price from 1 to 4?</b><br />
+      <input type="text" placeholder="food" [(ngModel)]="iTerm" name="1" required>
+      <br><br /> -->
+      <!-- <b> Zip Code/City?</b> -->
+      <!-- <br /> -->
+      <!-- <input type="text" placeholder="46032" [(ngModel)]="iLocation" name="2" required><br> -->
+      <!-- <br />
+      <b> Price from 1 to 4?</b><br /> -->
       <!-- <input type="number" placeholder="price 1, 2, 3, 4" [(ngModel)]="iPrice" name="3" required><br> -->
       <!-- <select name="iPrice" form="star" [(ngModel)]="iPrice" > -->
-
-      <select name="iPrice" form="star" [(ngModel)]="iPrice">
+      <!-- <select name="iPrice" form="star" [(ngModel)]="iPrice">
         <option value="1">$</option>
         <option value="2">$$</option>
         <option value="3">$$$</option>
         <option value="4">$$$$</option>
-      </select>
+      </select> -->
     </form>
     <br />
-    <button (click)="searchItYelp(iTerm, iLocation, iPrice)">Yelp it!</button>
-    </div>
-  <div class='right'>
+    <button (click)="findMe()">Pie Me!</button>
+    <!-- <button (click)="searchItYelp(iTerm, iLocation, iPrice)">Yelp it!</button> -->
+    <br />
+    <!-- </div> -->
+    <!-- <div class='right'> -->
     <!-- 
 {{ iTerm }}
 {{ iLocation }}
 {{ iPrice }} -->
     <div class="card">
-          <h1>Currently open....</h1>
+      <h4>The 20 closest Pizza Places by GPS location.</h4>
       <br />
       <p *ngFor="let one of results.businesses ">
         <b>{{ one.name }}</b> <br>
         {{ one.location.display_address }}<br>
         {{ one.display_phone }}<br>
         rating: {{ one.rating }} stars<br>
-        {{ one.display_phone }}<br>
-        <!-- {{ one.transactions }}<br> -->
+        <!-- {{ one.display_phone }}<br> -->
+        {{ one.transactions }}<br>
         <img [src]="one.image_url" width="100" height="100">
       </p>
     </div>
   </div>
 </div>
+<!-- </div> -->
 
 <!-- {{ businesess.name | json }} -->
 <!-- {{ error | json }} -->
