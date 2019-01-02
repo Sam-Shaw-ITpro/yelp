@@ -1,0 +1,24 @@
+<div class='container'>
+  <p>Find the 20 Pizza places in the area</p>
+  <!-- <button [routerLink]="['/manyplaces']">Find Pie!</button> -->
+  <button (click)="findMe()">Pie Me!</button>
+  <br />
+  <div class='many'>
+    <p *ngFor="let one of results.businesses ">
+      <!-- <button (click)="showOne(one.id)"> -->
+      <button [routerLink]="['/oneplace', { id: one.id } ]">
+        <!-- <button [routerLink]="['/oneplace']"> -->
+        <div class="card">
+          <p>
+            <br />
+            <b>{{ one.name }}</b> <br />
+            {{ one.location.display_address }}<br>
+            {{ one.display_phone }}<br>
+            rating: {{ one.rating }} stars<br>
+            <img [src]="one.image_url" width="140" height="140">
+          </p>
+        </div>
+      </button>
+    </p>
+  </div>
+</div>

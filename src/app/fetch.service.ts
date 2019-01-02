@@ -23,10 +23,10 @@ export class FetchService {
   ) { }
 
   // &open_now=true
-    pieMe(currentLat, currentLong): Observable<any> {
+  pieMe(currentLat, currentLong): Observable<any> {
     return this.http.get<any>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?categories=pizza&latitude=${currentLat}&longitude=${currentLong}`, httpOptions);
-  }        
-  
+  }
+
   getOne(id): Observable<any> {
     return this.http.get<any>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/${id}`, httpOptions);
   }
@@ -51,7 +51,7 @@ export class FetchService {
 
 
 
-  
+
 
 
 

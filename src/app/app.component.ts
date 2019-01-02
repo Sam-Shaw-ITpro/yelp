@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FetchService } from "./fetch.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,32 +8,21 @@ import { FetchService } from "./fetch.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  // iTerm: string;
-  // iTerm = "food";
-  // iLocation: string;
-  // iPrice: number;
   title = 'Pie Me!';
   error = '';
   results = '';
   Place = '';
   place = '';
-  // currentBusiness: any;
-  // currentLocation: any;
-  // mapsAPILoader: any;
-  // zoom: any;
-  // google: any;
   currentLat: string;
   currentLong: string;
 
   constructor(
-    // private _mapsAPILoader: MapsAPILoader
-    private fetchservice: FetchService
+    private fetchservice: FetchService,
+    private router: Router
   ) { }
 
   ngOnInit() {
-    // this.findMe()
-    }
-
+}
   
   findMe() {
     if (navigator.geolocation) {
@@ -56,12 +46,11 @@ export class AppComponent implements OnInit {
       (Results => {
         this.results = Results;
         console.log('results   ', this.results);
-        console.log(currentLat, currentLong);
+        // console.log(currentLat, currentLong);
       },
         error => {
           this.error = error;
           console.log('error', this.error);
-          // console.log(iTerm, iLocation, iPrice);
         });
   }
 
@@ -69,7 +58,7 @@ export class AppComponent implements OnInit {
     this.fetchservice.getOne(id).subscribe
       (Place => {
         this.place = Place;
-        console.log('results   ', this.place);
+        console.log('place   ', this.place);
         console.log(id);
       },
         error => {

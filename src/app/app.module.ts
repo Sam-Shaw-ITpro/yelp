@@ -6,10 +6,14 @@ import { AppComponent } from './app.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http'
 import { FetchService } from './fetch.service';
 import { FormsModule } from '@angular/forms';
+import { OneplaceComponent } from './oneplace/oneplace.component';
+import { ManyplacesComponent } from './manyplaces/manyplaces.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OneplaceComponent,
+    ManyplacesComponent
   ],
   imports: [
     BrowserModule,
