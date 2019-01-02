@@ -1,47 +1,56 @@
-<div class='container'>
-  <div class='left'>
-    <form class="bigger">
-      <!-- <b>Pizza/Chinese/Burgers</b>
+<!-- <div class='container'>
+  <button (click)="findMe()">Pie Me!</button>
+  <div class='left'> -->
+<!-- <form class="bigger"> -->
+<!-- <b>Pizza/Chinese/Burgers</b>
       <br>
       <input type="text" placeholder="food" [(ngModel)]="iTerm" name="1" required>
       <br><br /> -->
-      <!-- <b> Zip Code/City?</b> -->
-      <!-- <br /> -->
-      <!-- <input type="text" placeholder="46032" [(ngModel)]="iLocation" name="2" required><br> -->
-      <!-- <br />
+<!-- <b> Zip Code/City?</b> -->
+<!-- <br /> -->
+<!-- <input type="text" placeholder="46032" [(ngModel)]="iLocation" name="2" required><br> -->
+<!-- <br />
       <b> Price from 1 to 4?</b><br /> -->
-      <!-- <input type="number" placeholder="price 1, 2, 3, 4" [(ngModel)]="iPrice" name="3" required><br> -->
-      <!-- <select name="iPrice" form="star" [(ngModel)]="iPrice" > -->
-      <!-- <select name="iPrice" form="star" [(ngModel)]="iPrice">
+<!-- <input type="number" placeholder="price 1, 2, 3, 4" [(ngModel)]="iPrice" name="3" required><br> -->
+<!-- <select name="iPrice" form="star" [(ngModel)]="iPrice" > -->
+<!-- <select name="iPrice" form="star" [(ngModel)]="iPrice">
         <option value="1">$</option>
         <option value="2">$$</option>
         <option value="3">$$$</option>
         <option value="4">$$$$</option>
       </select> -->
-    </form>
-    <br />
-    <button (click)="findMe()">Pie Me!</button>
-    <!-- <button (click)="searchItYelp(iTerm, iLocation, iPrice)">Yelp it!</button> -->
-    <br />
-    <!-- </div> -->
-    <!-- <div class='right'> -->
-    <!-- 
+<!-- </form> -->
+<!-- <br /> -->
+<!-- <button (click)="findMe()">Pie Me!</button> -->
+<!-- <h4>The 20 closest Pizza Places by GPS location.</h4> -->
+<!-- <button (click)="searchItYelp(iTerm, iLocation, iPrice)">Yelp it!</button> -->
+<!-- <br /> -->
+<!-- </div> -->
+<!-- <div class='right'> -->
+<!-- 
 {{ iTerm }}
 {{ iLocation }}
 {{ iPrice }} -->
-    <div class="card">
-      <h4>The 20 closest Pizza Places by GPS location.</h4>
-      <br />
-      <p *ngFor="let one of results.businesses ">
-        <b>{{ one.name }}</b> <br>
-        {{ one.location.display_address }}<br>
-        {{ one.display_phone }}<br>
-        rating: {{ one.rating }} stars<br>
-        <!-- {{ one.display_phone }}<br> -->
-        {{ one.transactions }}<br>
-        <img [src]="one.image_url" width="100" height="100">
-      </p>
-    </div>
+<br />
+<div class='container'>
+  <br />
+  <button (click)="findMe()">Pie Me!</button>
+  <br />
+  <div class='left'>
+    <p *ngFor="let one of results.businesses ">
+      <button (click)="showOne(one.id)">
+        <div class="card">
+          <p>
+            <br />
+            <b>{{ one.name }}</b> <br />
+            {{ one.location.display_address }}<br>
+            {{ one.display_phone }}<br>
+            rating: {{ one.rating }} stars<br>
+            <img [src]="one.image_url" width="140" height="140">
+          </p>
+        </div>
+      </button>
+    </p>
   </div>
 </div>
 <!-- </div> -->

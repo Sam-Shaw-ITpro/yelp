@@ -1,5 +1,4 @@
 .container {
-
   width: 98%;
   padding: 2%;
   background-color: #cc3300;
@@ -11,24 +10,31 @@
   background-size: 100%;
 }
 
-.left {
+/* .left { */
+  /* vertical-align: top; */
+  /* width: 33%; */
+  /* display: inline-block; */
+/* } */
+
+.left p {
   vertical-align: top;
-  width: 100%;
+  width: 20%;
+  min-width: 200px;
   display: inline-block;
 }
 
-.right {
 
+/* .right {
   vertical-align: top;
   width: 50%;
   display: inline-block;
-}
+} */
 
-.bigger {
+/* .bigger {
   font-size: 200%;
-}
+} */
 
-button {
+/* button {
   font-family: 'Rubik', sans-serif;
   font-size: 250%;
   font-weight: 200%;
@@ -36,23 +42,18 @@ button {
   color: black;
   border: none;
   border-radius: 2px;
-}
+} */
 
-select {
+/* select {
   font-size: 150%;
-}
+} */
 
-input {
+/* input {
   font-size: 150%;
-}
+} */
+
 /* 
 .card {
-  background-color: white;
-  color: black;
-  opacity: 90%;
-
-} */
-.card p {
   background-color: white;
   opacity: 80%;
   color: black;
@@ -60,8 +61,35 @@ input {
   display: inline-block;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: 21%;
-  margin: 2%;
+  width: 195px;
+  margin: 5px;
+  vertical-align: top;
+} */
+
+/* .card {
+  background-color: white;
+  opacity: 80%;
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 195px;
+  height: 275px;
+  margin: 5px;
+  vertical-align: top;
+} */
+
+.card p {
+ 
+  color: black;
+  text-align: center;
+  background-color: white;
+  opacity: 80%;
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 195px;
+  height: 275px;
+  margin: 5px;
   vertical-align: top;
 }
 

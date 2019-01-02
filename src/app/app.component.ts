@@ -70,7 +70,7 @@ export class AppComponent implements OnInit {
       (Place => {
         this.place = Place;
         console.log('results   ', this.place);
-        console.log();
+        console.log(id);
       },
         error => {
           this.error = error;
