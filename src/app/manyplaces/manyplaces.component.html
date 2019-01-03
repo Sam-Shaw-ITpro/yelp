@@ -1,5 +1,9 @@
 <div class='container'>
-  <p>Find the 20 Pizza places in the area</p>
+  <!-- <h4>This app determines your GPS location, then using</h4>
+  <h4>the Yelp API it displays 20 Pizza places in the area</h4> -->
+
+  <h2>This app determines your GPS location, then using the Yelp API it displays 20 Pizza places in the area</h2>
+  <p>note: The Yelp API can be slow.</p>
   <!-- <button [routerLink]="['/manyplaces']">Find Pie!</button> -->
   <button (click)="findMe()">Pie Me!</button>
   <br />
@@ -16,6 +20,8 @@
             {{ one.display_phone }}<br>
             rating: {{ one.rating }} stars<br>
             <img [src]="one.image_url" width="140" height="140">
+            <br>
+            (click to select)
           </p>
         </div>
       </button>

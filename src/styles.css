@@ -3,7 +3,10 @@ body {
 }
 
 .container {
+    /* padding: 5%; */
+    /* align-content: center; */
     width: 100%;
+    min-height: 800px;
     background-color: #cc3300;
     display: inline-block;
     text-align: center;
@@ -11,15 +14,29 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
+.container button {
+    font-size: 30px;
+}
+
+.many button {
+    font-size: 100%;
+}
+
 .one {
-    padding: 5%;
     background-color: white;
     color: black;
-    /* vertical-align: top; */
-    width: 50%;
+    width: 300px;
     margin: auto;
     /* display: inline-block; */
 }
+/* 
+.one img { */
+
+    /* width: 30%; */
+    /* margin: auto;
+ 
+} */
+
 
 .many p {
     vertical-align: top;
@@ -32,7 +49,6 @@ body {
     color: black;
     text-align: center;
     background-color: white;
-    /* opacity: 80%; */
     display: inline-block;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;

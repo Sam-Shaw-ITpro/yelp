@@ -1,10 +1,20 @@
 <div class='container'>
+  <br />
+  <br />
+  <br />
   <div class='one'>
     <br />
     <b>{{ place.name }}</b> <br />
     <!-- {{ place.location.display_address }}<br> -->
     {{ place.display_phone }}<br>
-    rating: {{ place.rating }} stars<br>
-    <img [src]="place.image_url" width="300" height="300">
+    rating: {{ place.rating }} stars<br />
+    <br />
+    <img [src]="place.image_url " width="200">
+    <br />
+    <br />
+    <!-- {{ place.location.display_address }}<br> -->
   </div>
+  <br />
+  <button [routerLink]="['/manyplaces']">return to home</button>
+  <br />
 </div>
