@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FetchService } from "../fetch.service";
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+import { Place } from '../place.model';
 
 @Component({
   selector: 'app-oneplace',
@@ -12,8 +13,8 @@ export class OneplaceComponent implements OnInit {
 
   error = '';
   results = '';
-  Place = '';
-  place = '';
+  // Place = '';
+  place = [];
 
   constructor(
     private fetchservice: FetchService,

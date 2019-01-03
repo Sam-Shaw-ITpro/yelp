@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from "rxjs";
+import { Place } from './place.model';
+import { Results } from './results.model';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -16,6 +18,7 @@ export class FetchService {
   // iTerm: string;
   // iLocation: string;
   // iPrice: number;
+  // Results: 
 
 
   constructor(
@@ -23,12 +26,12 @@ export class FetchService {
   ) { }
 
   // &open_now=true
-  pieMe(currentLat, currentLong): Observable<any> {
-    return this.http.get<any>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?categories=pizza&latitude=${currentLat}&longitude=${currentLong}`, httpOptions);
+  pieMe(currentLat, currentLong): Observable<Results[]> {
+    return this.http.get<Results[]>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?categories=pizza&latitude=${currentLat}&longitude=${currentLong}`, httpOptions);
   }
 
-  getOne(id): Observable<any> {
-    return this.http.get<any>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/${id}`, httpOptions);
+  getOne(id): Observable<Place[]> {
+    return this.http.get<Place[]>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/${id}`, httpOptions);
   }
 
 

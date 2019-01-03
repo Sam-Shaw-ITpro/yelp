@@ -10,9 +10,9 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   title = 'Pie Me!';
   error = '';
-  results = '';
+  results = [];
   Place = '';
-  place = '';
+  place = [];
   currentLat: string;
   currentLong: string;
 

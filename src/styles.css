@@ -50,14 +50,14 @@ body {
     text-align: center;
     background-color: white;
     display: inline-block;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
     transition: 0.3s;
     width: 197px;
-    height: 272px;
+    height: 292px;
     margin: 3px;
     vertical-align: top;
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
 }
