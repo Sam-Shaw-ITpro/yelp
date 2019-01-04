@@ -20,9 +20,6 @@ export class FetchService {
     private http: HttpClient
   ) { }
 
-  // &open_now=true
-  // (Drink: AllOrdersFromService)
-
   getMany(currentLat, currentLong): Observable<Results> {
     return this.http.get<Results>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?categories=pizza&latitude=${currentLat}&longitude=${currentLong}`, httpOptions);
   }

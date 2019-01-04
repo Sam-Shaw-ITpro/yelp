@@ -10,9 +10,8 @@ import { Place } from '../place.model';
   styleUrls: ['./oneplace.component.css']
 })
 export class OneplaceComponent implements OnInit {
-
   error = '';
-  results = '';
+  // place: object;
   // Place = '';
   place = [];
 
@@ -32,7 +31,6 @@ export class OneplaceComponent implements OnInit {
       error => {
         this.error = error;
         console.log('error', this.error);
-        // console.log(iTerm, iLocation, iPrice);
       });
   }
 
@@ -40,7 +38,7 @@ export class OneplaceComponent implements OnInit {
     this.fetchservice.getOne(id).subscribe
       (Place => {
         this.place = Place;
-        console.log('place   ', this.place);
+        console.log('place ', this.place);
         console.log(id);
       },
         error => {
