@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FetchService } from "../fetch.service";
 import { Router } from '@angular/router';
+// import { Results } from '../results.model';
 
 @Component({
   selector: 'app-manyplaces',
@@ -10,12 +11,12 @@ import { Router } from '@angular/router';
 export class ManyplacesComponent implements OnInit {
   title = 'Pie Me!';
   error = '';
-  results = [];
-  Place = '';
-  place = [];
+  results: object;
+  // businesses: any[];
+  // Results: any[];
   currentLat: string;
   currentLong: string;
-
+  
   constructor(
     private fetchservice: FetchService,
     private router: Router
@@ -41,11 +42,11 @@ export class ManyplacesComponent implements OnInit {
   }
 
   searchItYelp(currentLat, currentLong): void {
-    this.fetchservice.pieMe(currentLat, currentLong).subscribe
-      (Results => {
-        this.results = Results;
-        console.log('results   ', this.results);
-        // console.log(currentLat, currentLong);
+    this.fetchservice.getMany(currentLat, currentLong)
+    .subscribe(Results => {
+        this.results = Results.businesses;
+          console.log('results   ', this.results);
+      
       },
         error => {
           this.error = error;
@@ -53,3 +54,16 @@ export class ManyplacesComponent implements OnInit {
         });
   }
 }
+
+// searchItYelp(currentLat, currentLong): void {
+//   this.fetchservice.getMany(currentLat, currentLong).subscribe
+//     (Results => {
+//       this.results = Results.businesses;
+//       console.log('results   ', this.results);
+//       // console.log(currentLat, currentLong);
+//     },
+//       error => {
+//         this.error = error;
+//         console.log('error', this.error);
+//       });
+// }

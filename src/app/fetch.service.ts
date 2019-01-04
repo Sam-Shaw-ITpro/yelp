@@ -15,19 +15,16 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class FetchService {
-  // iTerm: string;
-  // iLocation: string;
-  // iPrice: number;
-  // Results: 
-
 
   constructor(
     private http: HttpClient
   ) { }
 
   // &open_now=true
-  pieMe(currentLat, currentLong): Observable<Results[]> {
-    return this.http.get<Results[]>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?categories=pizza&latitude=${currentLat}&longitude=${currentLong}`, httpOptions);
+  // (Drink: AllOrdersFromService)
+
+  getMany(currentLat, currentLong): Observable<Results> {
+    return this.http.get<Results>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?categories=pizza&latitude=${currentLat}&longitude=${currentLong}`, httpOptions);
   }
 
   getOne(id): Observable<Place[]> {
