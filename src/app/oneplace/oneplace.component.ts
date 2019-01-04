@@ -11,9 +11,9 @@ import { Place } from '../place.model';
 })
 export class OneplaceComponent implements OnInit {
   error = '';
-  // place: object;
+  place: object;
   // Place = '';
-  place = [];
+  // place = [];
 
   constructor(
     private fetchservice: FetchService,
