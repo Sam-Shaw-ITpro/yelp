@@ -27,32 +27,8 @@ export class FetchService {
     return this.http.get<Results>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?categories=pizza&latitude=${currentLat}&longitude=${currentLong}`, httpOptions);
   }
 
-  getOne(id): Observable<Place[]> {
-    return this.http.get<Place[]>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/${id}`, httpOptions);
+  getOne(id): Observable<Place> {
+    return this.http.get<Place>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/${id}`, httpOptions);
   }
-
-
-
-  // GET https://api.yelp.com/v3/businesses/{id}
-
-
-
-  // yelpIt(currentLat, currentLong): Observable<any> {
-  //   return this.http.get<any>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=pizza&location=${iLocation}&price=1`, httpOptions);
-  // }                       
-
-  // yelpIt(iTerm, iLocation, iPrice): Observable<any> {
-  //   return this.http.get<any>(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${iTerm}&location=${iLocation}&price=${iPrice}`, httpOptions);
-  // }                       
-
-
-
-
-
-
-
-
-
-
 
 }
