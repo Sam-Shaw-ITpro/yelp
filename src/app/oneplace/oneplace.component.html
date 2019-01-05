@@ -9,13 +9,14 @@
     <div *ngIf="place">{{ place.display_phone }}</div><br>
     <div *ngIf="place">rating: {{ place.rating }} stars</div><br />
     <br />
-    <div *ngIf="place"> <img [src]="place.image_url " width="200"></div>
+    <div *ngIf="place"> <img [src]="place.image_url" width="200"></div>
 
     <!-- <img [src]="place.image_url " width="200"> -->
     <br />
     <br />
   </div>
   <br />
-  <button [routerLink]="['/manyplaces']">return to home</button>
+  <!-- <button [routerLink]="/manyplaces">return to home</button> -->
+  <button routerLink="/manyplaces">return to home</button>
   <br />
 </div>
