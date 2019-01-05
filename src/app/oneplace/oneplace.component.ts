@@ -13,7 +13,7 @@ export class OneplaceComponent implements OnInit {
   error = '';
   place: object;
   // Place = '';
-  // place = [];
+  // Place: any[];
 
   constructor(
     private fetchservice: FetchService,
@@ -39,6 +39,7 @@ export class OneplaceComponent implements OnInit {
       (Place => {
         this.place = Place;
         console.log('place ', this.place);
+        // console.log('name ', this.place.name);
         console.log(id);
       },
         error => {
