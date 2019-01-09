@@ -1,17 +1,11 @@
 <div class='container'>
-  <!-- <h4>This app determines your GPS location, then using</h4>
-  <h4>the Yelp API it displays 20 Pizza places in the area</h4> -->
-
   <h2>This app determines your GPS location, then using the Yelp API it displays 20 Pizza places in the area</h2>
   <p>note: The Yelp API can be slow.</p>
-  <!-- <button [routerLink]="['/manyplaces']">Find Pie!</button> -->
   <button (click)="findMe()">Pie Me!</button>
   <br />
   <div class='many'>
     <p *ngFor="let one of results">
-      <!-- <button (click)="showOne(one.id)"> -->
       <button [routerLink]="['/oneplace', { id: one.id } ]">
-        <!-- <button [routerLink]="['/oneplace']"> -->
         <div class="card">
           <p>
             <br />

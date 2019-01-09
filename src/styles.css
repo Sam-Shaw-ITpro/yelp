@@ -27,16 +27,9 @@ body {
     color: black;
     width: 300px;
     margin: auto;
-    /* display: inline-block; */
+    font-size: 20px;
+    font-weight: 1000;
 }
-/* 
-.one img { */
-
-    /* width: 30%; */
-    /* margin: auto;
- 
-} */
-
 
 .many p {
     vertical-align: top;

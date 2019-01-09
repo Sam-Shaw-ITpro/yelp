@@ -4,19 +4,16 @@
   <br />
   <div class='one'>
     <br />
-    <div *ngIf="place">{{ place.name }}</div> <br />
-    <div *ngIf="place">{{ place.location.display_address }}</div><br>
-    <div *ngIf="place">{{ place.display_phone }}</div><br>
-    <div *ngIf="place">rating: {{ place.rating }} stars</div><br />
-    <br />
-    <div *ngIf="place"> <img [src]="place.image_url" width="200"></div>
-
-    <!-- <img [src]="place.image_url " width="200"> -->
-    <br />
+    <div *ngIf="place">{{ place.name }}<br />
+      {{ place.location.display_address }}<br>
+      {{ place.display_phone }}<br>
+      rating: {{ place.rating }} stars<br />
+      <br />
+      <img [src]="place.image_url" width="200">
+    </div>
     <br />
   </div>
   <br />
-  <!-- <button [routerLink]="/manyplaces">return to home</button> -->
   <button routerLink="/manyplaces">return to home</button>
   <br />
 </div>
